@@ -1,0 +1,42 @@
+<h1>Show Vet</h1>
+
+<ul>
+  <div class="profile-card">
+    <div class="card-header">
+      <div class="pic">
+        <img src="/images/vet.png" alt="">
+      </div>
+
+      <li>
+        <strong>Name:</strong>
+        <%= @vet.name %>
+      </li>
+
+      <li>
+        <strong>Age:</strong>
+        <%= @vet.age %>
+      </li>
+
+      <li>
+        <strong>Email:</strong>
+        <%= @vet.email %>
+      </li>
+
+      <li>
+        <strong>Sex:</strong>
+        <%= @vet.sex %>
+      </li>
+
+    </div>
+
+    <div class="card-footer">
+     <li>
+        <strong>Specialities:</strong>
+        <%= @vet.specialities %>
+      </li>
+    </div>
+  </div>
+</ul>
+
+<span><%= link "Edit", to: Routes.vet_path(@conn, :edit, @vet) %></span> |
+<span><%= link "Back", to: Routes.vet_path(@conn, :index) %></span>
